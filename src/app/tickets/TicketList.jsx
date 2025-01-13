@@ -2,10 +2,10 @@ import Link from "next/link";
 import React from "react";
 
 async function getTickets() {
-  await new Promise((resolve) => setTimeout(resolve, 2000));
+  //await new Promise((resolve) => setTimeout(resolve, 2000));
   const res = await fetch("http://localhost:4000/tickets", {
     next: {
-      revalidate: 10, //0 means no cache
+      revalidate: 0, //0 means no cache
     },
   });
 
