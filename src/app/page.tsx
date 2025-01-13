@@ -10,9 +10,12 @@ export default function Home() {
         excepteur ad ut cupidatat anim.
       </p>
 
-      <div className="flex justify-center my-8">
+      <div className="flex justify-center my-8 ">
         <Link href="/tickets">
-          <button className="btn-primary">View Tickets</button>
+          <button className="btn-primary mx-2">View Tickets</button>
+        </Link>
+        <Link href="/tickets/create">
+          <button className="btn-primary mx-2">Create Ticket</button>
         </Link>
       </div>
 

@@ -4,33 +4,24 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 First, run the development server:
 
-```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+For the database I used JSON server by running this command in a new terminal: 
+json-server --watch --port 4000 ./_data/db.json
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The app is a basic ticket tracking system using React and Next.
 
-## Learn More
+The main page is the dashboard where there can be an intro to the app, updates from the company and a buttons for the submited tickets and to create a ticket.
 
-To learn more about Next.js, take a look at the following resources:
+At the top we have the navbar, with the logo, name of the app and buttons for the dashboard, tickets and to create a ticket. This navbar persists in all pages.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+In the tickets page we see the opened tickets. Clicking on any of them will open a page with more info about the ticket. The set priorities are color coded.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+In the create a ticket page you will see a form to fill out the title, description and priority of the ticket. The button at the bottom is coded to be unavailable while the ticket`s data is being processed so that there is no spam clicking.
 
-## Deploy on Vercel
+We have a custom loading page too, as well as custom 404 pages.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Things to do:
+Functionality to delete and edit tickets.
